@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6504C3E624A20532005CE0CF /* VTBLEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C3E524A20532005CE0CF /* VTBLEUtils.m */; };
+		6504C3E924A21824005CE0CF /* VTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C3E824A21824005CE0CF /* VTDevice.m */; };
+		6504C41524A9CEE9005CE0CF /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C40B24A9CEE9005CE0CF /* SVRadialGradientLayer.m */; };
+		6504C41624A9CEE9005CE0CF /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C40E24A9CEE9005CE0CF /* SVProgressAnimatedView.m */; };
+		6504C41724A9CEE9005CE0CF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C41124A9CEE9005CE0CF /* SVProgressHUD.m */; };
+		6504C41824A9CEE9005CE0CF /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C41224A9CEE9005CE0CF /* SVIndefiniteAnimatedView.m */; };
+		6504C41924A9CEE9005CE0CF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6504C41324A9CEE9005CE0CF /* SVProgressHUD.bundle */; };
+		6504C41C24A9DCE6005CE0CF /* VTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C41B24A9DCE6005CE0CF /* VTMenuViewController.m */; };
+		6504C41F24A9EB7D005CE0CF /* VTInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C41E24A9EB7C005CE0CF /* VTInfoViewController.m */; };
+		6504C42524A9EBA1005CE0CF /* VTRealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C42424A9EBA1005CE0CF /* VTRealViewController.m */; };
+		6570DEB624A09FBD00F80D5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEB524A09FBD00F80D5C /* AppDelegate.m */; };
+		6570DEBF24A09FBD00F80D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6570DEBD24A09FBD00F80D5C /* Main.storyboard */; };
+		6570DEC124A09FC200F80D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6570DEC024A09FC200F80D5C /* Assets.xcassets */; };
+		6570DEC424A09FC200F80D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6570DEC224A09FC200F80D5C /* LaunchScreen.storyboard */; };
+		6570DEC724A09FC200F80D5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEC624A09FC200F80D5C /* main.m */; };
+		6570DED124A09FC300F80D5C /* VTO2LibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DED024A09FC300F80D5C /* VTO2LibTests.m */; };
+		6570DEDC24A09FC300F80D5C /* VTO2LibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEDB24A09FC300F80D5C /* VTO2LibUITests.m */; };
+		6570DEEE24A0ADAA00F80D5C /* VTConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */; };
+		65A7EA5B24ADEC6C00CFF113 /* VTO2Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A7EA5A24ADEC6C00CFF113 /* VTO2Lib.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6570DECD24A09FC300F80D5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6570DEA924A09FBD00F80D5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6570DEB024A09FBD00F80D5C;
+			remoteInfo = VTO2Lib;
+		};
+		6570DED824A09FC300F80D5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6570DEA924A09FBD00F80D5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6570DEB024A09FBD00F80D5C;
+			remoteInfo = VTO2Lib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6504C3E424A20532005CE0CF /* VTBLEUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBLEUtils.h; sourceTree = "<group>"; };
+		6504C3E524A20532005CE0CF /* VTBLEUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBLEUtils.m; sourceTree = "<group>"; };
+		6504C3E724A21824005CE0CF /* VTDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDevice.h; sourceTree = "<group>"; };
+		6504C3E824A21824005CE0CF /* VTDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDevice.m; sourceTree = "<group>"; };
+		6504C40B24A9CEE9005CE0CF /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		6504C40C24A9CEE9005CE0CF /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		6504C40D24A9CEE9005CE0CF /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		6504C40E24A9CEE9005CE0CF /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		6504C40F24A9CEE9005CE0CF /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		6504C41024A9CEE9005CE0CF /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		6504C41124A9CEE9005CE0CF /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		6504C41224A9CEE9005CE0CF /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		6504C41324A9CEE9005CE0CF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		6504C41424A9CEE9005CE0CF /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		6504C41A24A9DCE6005CE0CF /* VTMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTMenuViewController.h; sourceTree = "<group>"; };
+		6504C41B24A9DCE6005CE0CF /* VTMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTMenuViewController.m; sourceTree = "<group>"; };
+		6504C41D24A9EB7C005CE0CF /* VTInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTInfoViewController.h; sourceTree = "<group>"; };
+		6504C41E24A9EB7C005CE0CF /* VTInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTInfoViewController.m; sourceTree = "<group>"; };
+		6504C42324A9EBA1005CE0CF /* VTRealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTRealViewController.h; sourceTree = "<group>"; };
+		6504C42424A9EBA1005CE0CF /* VTRealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTRealViewController.m; sourceTree = "<group>"; };
+		6570DEB124A09FBD00F80D5C /* VTO2Lib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTO2Lib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6570DEB424A09FBD00F80D5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6570DEB524A09FBD00F80D5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6570DEBE24A09FBD00F80D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6570DEC024A09FC200F80D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6570DEC324A09FC200F80D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6570DEC524A09FC200F80D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6570DEC624A09FC200F80D5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6570DECC24A09FC300F80D5C /* VTO2LibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTO2LibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6570DED024A09FC300F80D5C /* VTO2LibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTO2LibTests.m; sourceTree = "<group>"; };
+		6570DED224A09FC300F80D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6570DED724A09FC300F80D5C /* VTO2LibUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTO2LibUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6570DEDB24A09FC300F80D5C /* VTO2LibUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTO2LibUITests.m; sourceTree = "<group>"; };
+		6570DEDD24A09FC300F80D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6570DEEC24A0ADAA00F80D5C /* VTConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTConnectViewController.h; sourceTree = "<group>"; };
+		6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTConnectViewController.m; sourceTree = "<group>"; };
+		65A7EA5A24ADEC6C00CFF113 /* VTO2Lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VTO2Lib.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6570DEAE24A09FBD00F80D5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A7EA5B24ADEC6C00CFF113 /* VTO2Lib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6570DEC924A09FC300F80D5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6570DED424A09FC300F80D5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6504C3E324A204EC005CE0CF /* VTBLE */ = {
+			isa = PBXGroup;
+			children = (
+				6504C3E424A20532005CE0CF /* VTBLEUtils.h */,
+				6504C3E524A20532005CE0CF /* VTBLEUtils.m */,
+				6504C3E724A21824005CE0CF /* VTDevice.h */,
+				6504C3E824A21824005CE0CF /* VTDevice.m */,
+			);
+			path = VTBLE;
+			sourceTree = "<group>";
+		};
+		6504C3EA24A865A0005CE0CF /* VTO2Communicate */ = {
+			isa = PBXGroup;
+			children = (
+				65A7EA5A24ADEC6C00CFF113 /* VTO2Lib.framework */,
+			);
+			path = VTO2Communicate;
+			sourceTree = "<group>";
+		};
+		6504C40A24A9CEE9005CE0CF /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6504C40B24A9CEE9005CE0CF /* SVRadialGradientLayer.m */,
+				6504C40C24A9CEE9005CE0CF /* SVIndefiniteAnimatedView.h */,
+				6504C40D24A9CEE9005CE0CF /* SVProgressHUD.h */,
+				6504C40E24A9CEE9005CE0CF /* SVProgressAnimatedView.m */,
+				6504C40F24A9CEE9005CE0CF /* SVProgressHUD-Prefix.pch */,
+				6504C41024A9CEE9005CE0CF /* SVRadialGradientLayer.h */,
+				6504C41124A9CEE9005CE0CF /* SVProgressHUD.m */,
+				6504C41224A9CEE9005CE0CF /* SVIndefiniteAnimatedView.m */,
+				6504C41324A9CEE9005CE0CF /* SVProgressHUD.bundle */,
+				6504C41424A9CEE9005CE0CF /* SVProgressAnimatedView.h */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		6570DEA824A09FBD00F80D5C = {
+			isa = PBXGroup;
+			children = (
+				6570DEB324A09FBD00F80D5C /* VTO2Lib */,
+				6570DECF24A09FC300F80D5C /* VTO2LibTests */,
+				6570DEDA24A09FC300F80D5C /* VTO2LibUITests */,
+				6570DEB224A09FBD00F80D5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6570DEB224A09FBD00F80D5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6570DEB124A09FBD00F80D5C /* VTO2Lib.app */,
+				6570DECC24A09FC300F80D5C /* VTO2LibTests.xctest */,
+				6570DED724A09FC300F80D5C /* VTO2LibUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6570DEB324A09FBD00F80D5C /* VTO2Lib */ = {
+			isa = PBXGroup;
+			children = (
+				6504C40A24A9CEE9005CE0CF /* SVProgressHUD */,
+				6504C3EA24A865A0005CE0CF /* VTO2Communicate */,
+				6504C3E324A204EC005CE0CF /* VTBLE */,
+				6570DEB424A09FBD00F80D5C /* AppDelegate.h */,
+				6570DEB524A09FBD00F80D5C /* AppDelegate.m */,
+				6570DEEC24A0ADAA00F80D5C /* VTConnectViewController.h */,
+				6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */,
+				6504C41A24A9DCE6005CE0CF /* VTMenuViewController.h */,
+				6504C41B24A9DCE6005CE0CF /* VTMenuViewController.m */,
+				6504C41D24A9EB7C005CE0CF /* VTInfoViewController.h */,
+				6504C41E24A9EB7C005CE0CF /* VTInfoViewController.m */,
+				6504C42324A9EBA1005CE0CF /* VTRealViewController.h */,
+				6504C42424A9EBA1005CE0CF /* VTRealViewController.m */,
+				6570DEBD24A09FBD00F80D5C /* Main.storyboard */,
+				6570DEC024A09FC200F80D5C /* Assets.xcassets */,
+				6570DEC224A09FC200F80D5C /* LaunchScreen.storyboard */,
+				6570DEC524A09FC200F80D5C /* Info.plist */,
+				6570DEC624A09FC200F80D5C /* main.m */,
+			);
+			path = VTO2Lib;
+			sourceTree = "<group>";
+		};
+		6570DECF24A09FC300F80D5C /* VTO2LibTests */ = {
+			isa = PBXGroup;
+			children = (
+				6570DED024A09FC300F80D5C /* VTO2LibTests.m */,
+				6570DED224A09FC300F80D5C /* Info.plist */,
+			);
+			path = VTO2LibTests;
+			sourceTree = "<group>";
+		};
+		6570DEDA24A09FC300F80D5C /* VTO2LibUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6570DEDB24A09FC300F80D5C /* VTO2LibUITests.m */,
+				6570DEDD24A09FC300F80D5C /* Info.plist */,
+			);
+			path = VTO2LibUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6570DEB024A09FBD00F80D5C /* VTO2Lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6570DEE024A09FC300F80D5C /* Build configuration list for PBXNativeTarget "VTO2Lib" */;
+			buildPhases = (
+				6570DEAD24A09FBD00F80D5C /* Sources */,
+				6570DEAE24A09FBD00F80D5C /* Frameworks */,
+				6570DEAF24A09FBD00F80D5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VTO2Lib;
+			productName = VTO2Lib;
+			productReference = 6570DEB124A09FBD00F80D5C /* VTO2Lib.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6570DECB24A09FC300F80D5C /* VTO2LibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6570DEE324A09FC300F80D5C /* Build configuration list for PBXNativeTarget "VTO2LibTests" */;
+			buildPhases = (
+				6570DEC824A09FC300F80D5C /* Sources */,
+				6570DEC924A09FC300F80D5C /* Frameworks */,
+				6570DECA24A09FC300F80D5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6570DECE24A09FC300F80D5C /* PBXTargetDependency */,
+			);
+			name = VTO2LibTests;
+			productName = VTO2LibTests;
+			productReference = 6570DECC24A09FC300F80D5C /* VTO2LibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6570DED624A09FC300F80D5C /* VTO2LibUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6570DEE624A09FC300F80D5C /* Build configuration list for PBXNativeTarget "VTO2LibUITests" */;
+			buildPhases = (
+				6570DED324A09FC300F80D5C /* Sources */,
+				6570DED424A09FC300F80D5C /* Frameworks */,
+				6570DED524A09FC300F80D5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6570DED924A09FC300F80D5C /* PBXTargetDependency */,
+			);
+			name = VTO2LibUITests;
+			productName = VTO2LibUITests;
+			productReference = 6570DED724A09FC300F80D5C /* VTO2LibUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6570DEA924A09FBD00F80D5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = viatom;
+				TargetAttributes = {
+					6570DEB024A09FBD00F80D5C = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					6570DECB24A09FC300F80D5C = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 6570DEB024A09FBD00F80D5C;
+					};
+					6570DED624A09FC300F80D5C = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 6570DEB024A09FBD00F80D5C;
+					};
+				};
+			};
+			buildConfigurationList = 6570DEAC24A09FBD00F80D5C /* Build configuration list for PBXProject "VTO2Lib" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6570DEA824A09FBD00F80D5C;
+			productRefGroup = 6570DEB224A09FBD00F80D5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6570DEB024A09FBD00F80D5C /* VTO2Lib */,
+				6570DECB24A09FC300F80D5C /* VTO2LibTests */,
+				6570DED624A09FC300F80D5C /* VTO2LibUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6570DEAF24A09FBD00F80D5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6570DEC424A09FC200F80D5C /* LaunchScreen.storyboard in Resources */,
+				6570DEC124A09FC200F80D5C /* Assets.xcassets in Resources */,
+				6570DEBF24A09FBD00F80D5C /* Main.storyboard in Resources */,
+				6504C41924A9CEE9005CE0CF /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6570DECA24A09FC300F80D5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6570DED524A09FC300F80D5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6570DEAD24A09FBD00F80D5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6504C41824A9CEE9005CE0CF /* SVIndefiniteAnimatedView.m in Sources */,
+				6504C41C24A9DCE6005CE0CF /* VTMenuViewController.m in Sources */,
+				6504C41524A9CEE9005CE0CF /* SVRadialGradientLayer.m in Sources */,
+				6570DEB624A09FBD00F80D5C /* AppDelegate.m in Sources */,
+				6504C41F24A9EB7D005CE0CF /* VTInfoViewController.m in Sources */,
+				6504C41724A9CEE9005CE0CF /* SVProgressHUD.m in Sources */,
+				6504C3E924A21824005CE0CF /* VTDevice.m in Sources */,
+				6570DEC724A09FC200F80D5C /* main.m in Sources */,
+				6504C41624A9CEE9005CE0CF /* SVProgressAnimatedView.m in Sources */,
+				6504C42524A9EBA1005CE0CF /* VTRealViewController.m in Sources */,
+				6570DEEE24A0ADAA00F80D5C /* VTConnectViewController.m in Sources */,
+				6504C3E624A20532005CE0CF /* VTBLEUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6570DEC824A09FC300F80D5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6570DED124A09FC300F80D5C /* VTO2LibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6570DED324A09FC300F80D5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6570DEDC24A09FC300F80D5C /* VTO2LibUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6570DECE24A09FC300F80D5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6570DEB024A09FBD00F80D5C /* VTO2Lib */;
+			targetProxy = 6570DECD24A09FC300F80D5C /* PBXContainerItemProxy */;
+		};
+		6570DED924A09FC300F80D5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6570DEB024A09FBD00F80D5C /* VTO2Lib */;
+			targetProxy = 6570DED824A09FC300F80D5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6570DEBD24A09FBD00F80D5C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6570DEBE24A09FBD00F80D5C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6570DEC224A09FC200F80D5C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6570DEC324A09FC200F80D5C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6570DEDE24A09FC300F80D5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6570DEDF24A09FC300F80D5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6570DEE124A09FC300F80D5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84Z5TBSNUY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VTO2Lib/VTO2Communicate",
+				);
+				INFOPLIST_FILE = VTO2Lib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2Lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6570DEE224A09FC300F80D5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84Z5TBSNUY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VTO2Lib/VTO2Communicate",
+				);
+				INFOPLIST_FILE = VTO2Lib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2Lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6570DEE424A09FC300F80D5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84Z5TBSNUY;
+				INFOPLIST_FILE = VTO2LibTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2LibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VTO2Lib.app/VTO2Lib";
+			};
+			name = Debug;
+		};
+		6570DEE524A09FC300F80D5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84Z5TBSNUY;
+				INFOPLIST_FILE = VTO2LibTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2LibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VTO2Lib.app/VTO2Lib";
+			};
+			name = Release;
+		};
+		6570DEE724A09FC300F80D5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84Z5TBSNUY;
+				INFOPLIST_FILE = VTO2LibUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2LibUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VTO2Lib;
+			};
+			name = Debug;
+		};
+		6570DEE824A09FC300F80D5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84Z5TBSNUY;
+				INFOPLIST_FILE = VTO2LibUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2LibUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VTO2Lib;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6570DEAC24A09FBD00F80D5C /* Build configuration list for PBXProject "VTO2Lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6570DEDE24A09FC300F80D5C /* Debug */,
+				6570DEDF24A09FC300F80D5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6570DEE024A09FC300F80D5C /* Build configuration list for PBXNativeTarget "VTO2Lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6570DEE124A09FC300F80D5C /* Debug */,
+				6570DEE224A09FC300F80D5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6570DEE324A09FC300F80D5C /* Build configuration list for PBXNativeTarget "VTO2LibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6570DEE424A09FC300F80D5C /* Debug */,
+				6570DEE524A09FC300F80D5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6570DEE624A09FC300F80D5C /* Build configuration list for PBXNativeTarget "VTO2LibUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6570DEE724A09FC300F80D5C /* Debug */,
+				6570DEE824A09FC300F80D5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6570DEA924A09FBD00F80D5C /* Project object */;
+}
