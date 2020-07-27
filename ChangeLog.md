@@ -1,3 +1,10 @@
+# 2020/7/27
+## O2 SDK v1.1
+1. 修复一个读取文件失败的bug
+
+## O2 SDK v1.1
+1. Fix a bug that failed to read file. 
+
 # 2020/7/2
 ## O2 SDK v1.0
 1. 匹配当前所有O2的功能
