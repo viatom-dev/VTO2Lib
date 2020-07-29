@@ -45,11 +45,15 @@ that `serviceDeployed:` returns YES,  NECESSAYR!
 ```objective-c
 - (void)readRSSI;
 ```
+- get real ppg data from the peripheral
+```objective-c
+- (void)beginGetRealPPG;
+```
 
 - information object `VTO2Lib/VTO2Info.h>`
 - O2 file object `<VTO2Lib/VTO2Object.h>`
 - O2 wave object `<VTO2Lib/VTO2WaveObject.h>`
-- O2 real-time object `<VTO2Lib/VTRealObject.h>`
+- O2 real-time or real-ppg object `<VTO2Lib/VTRealObject.h>`
 - oringinal data parser `<VTO2Lib/VTO2Parser.h>`
 
 

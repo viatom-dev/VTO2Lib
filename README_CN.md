@@ -41,9 +41,14 @@
 - (void)readRSSI;
 ```
 
+- 获取实时的原始PPG
+```objective-c
+- (void)beginGetRealPPG;
+```
+
 - O2信息参考 `VTO2Lib/VTO2Info.h>`
 - O2文件参考 `<VTO2Lib/VTO2Object.h>`
 - O2文件中包含的波形参考 `<VTO2Lib/VTO2WaveObject.h>`
-- O2实时数据参考 `<VTO2Lib/VTRealObject.h>`
+- O2实时数据/PPG参考 `<VTO2Lib/VTRealObject.h>`
 - O2原始数据解析器参考 `<VTO2Lib/VTO2Parser.h>`
 

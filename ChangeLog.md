@@ -1,3 +1,10 @@
+# 2020/7/29
+## O2 SDK v1.2
+1. 增加读取实时PPG功能
+
+## O2 SDK v1.2
+1. Add function that used to read real PPG data from peripheral.
+
 # 2020/7/27
 ## O2 SDK v1.1
 1. 修复一个读取文件失败的bug
