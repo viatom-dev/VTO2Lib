@@ -35,4 +35,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface VTRealPPG : NSObject
+
+/// @brief Infrared
+@property (nonatomic, assign) int ir;
+
+/// @brief RLED
+@property (nonatomic, assign) int red;
+
+/// @brief motion
+@property (nonatomic, assign) u_char motion;
+
+@end
+
+
 NS_ASSUME_NONNULL_END

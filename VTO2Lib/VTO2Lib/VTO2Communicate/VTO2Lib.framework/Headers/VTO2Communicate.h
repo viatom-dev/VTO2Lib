@@ -36,9 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param infoData information data nullable
 - (void)getInfoWithResultData:(NSData * _Nullable)infoData;
 
-/// @brief use  `parseO2RealObjectWithData` to parse realData.
+/// @brief use  `parseO2RealObjectWithData` to parse realData.  if realData == nil , an error occurred.
 /// @param realData  real data
 - (void)realDataCallBackWithData:(NSData * _Nullable)realData;
+
+/// @brief use `` to parse realPPG.  if realPPG == nil , an error occurred.
+/// @param realPPG real PPG data
+- (void)realPPGCallBackWithData:(NSData * _Nullable)realPPG;
 
 /// @brief read current peripheral's rssi
 /// @param RSSI rssi
@@ -72,6 +76,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief Restore factory. callback `commonResponse: andResult:`
 - (void)beginFactory;
 
+/// @brief get PPG data.
+- (void)beginGetRealPPG;
 
 /// @brief set params .  all type view struct  `VTParamType`  .  callback `commonResponse: andResult:`
 /// @param paramType param type

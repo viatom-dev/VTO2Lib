@@ -36,6 +36,7 @@ typedef enum : NSUInteger {
     VTCmdTypeGetInfo,
     VTCmdTypeSyncParam,
     VTCmdTypeGetRealData,
+    VTCmdTypeGetRealPPG,
     VTCmdTypeSetFactory,
 } VTCmdType;
 

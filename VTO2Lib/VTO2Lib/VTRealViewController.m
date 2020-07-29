@@ -26,7 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [VTO2Communicate sharedInstance].delegate = self;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(readRealtimeData) userInfo:nil repeats:YES];
+    if (_type == 0) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(readRealtimeData) userInfo:nil repeats:YES];
+    }else{
+        [self readRealPPGData];
+    }
+
 }
 
 - (void)dealloc{
@@ -34,8 +39,16 @@
     _timer = nil;
 }
 
+- (void)setType:(int)type{
+    _type = type;
+}
+
 - (void)readRealtimeData{
     [[VTO2Communicate sharedInstance] beginGetRealData];
+}
+
+- (void)readRealPPGData{
+    [[VTO2Communicate sharedInstance] beginGetRealPPG];
 }
 
 - (UILabel *)descLab{
@@ -51,9 +64,25 @@
 #pragma mark -- vt
 
 - (void)realDataCallBackWithData:(NSData *)realData{
+    if (realData == nil) {
+        DLog(@"error");
+        return;
+    }
     VTRealObject *rObj = [VTO2Parser parseO2RealObjectWithData:realData];
     self.descLab.text = [rObj description];
 }
 
+
+- (void)realPPGCallBackWithData:(NSData *)realPPG{
+    [self readRealPPGData];
+    if (realPPG == nil) {
+        DLog(@"error");
+        return;
+    }
+    NSArray *ppgArr = [VTO2Parser parseO2RealPPGWithData:realPPG];
+    
+    
+    
+}
 
 @end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VTRealViewController : UIViewController
 
+@property (nonatomic, assign) int type;  // 0 real-data  1  real-ppg
+
 @end
 
 NS_ASSUME_NONNULL_END

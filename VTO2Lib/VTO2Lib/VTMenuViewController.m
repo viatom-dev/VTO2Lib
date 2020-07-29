@@ -9,10 +9,12 @@
 #import "VTMenuViewController.h"
 #import <VTO2Lib/VTO2Lib.h>
 #import "VTBLEUtils.h"
+#import "VTRealViewController.h"
 
 @interface VTMenuViewController ()<UITableViewDelegate, UITableViewDataSource, VTO2CommunicateDelegate, VTBLEUtilsDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, copy) NSArray *funcArray;
+@property (nonatomic, assign) NSInteger funcRow;
 @end
 
 @implementation VTMenuViewController
@@ -20,11 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _funcArray = @[@"Get info",@"Real-time data",@"Reset"];
+    _funcArray = @[@"Get info",@"Real-time data",@"Real-PPG data",@"Reset"];
     [_myTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
     [VTBLEUtils sharedInstance].delegate = self;
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoVTRealViewController"]) {
+        VTRealViewController *vc = segue.destinationViewController;
+        vc.type = (int)_funcRow;
+    }
 }
 
 #pragma mark -- tableView
@@ -58,9 +67,18 @@
             [self performSegueWithIdentifier:@"gotoVTInfoViewController" sender:nil];
             break;
         case 1:
+        {
+            _funcRow = 0;
             [self performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
             break;
+        }
         case 2:
+        {
+            _funcRow = 1;
+            [self performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
+            break;
+        }
+        case 3:
         {
             [self showAlertWithTitle:@"It will erase all files" message:@"" handler:^(UIAlertAction *action) {
                 [VTO2Communicate sharedInstance].delegate = self;

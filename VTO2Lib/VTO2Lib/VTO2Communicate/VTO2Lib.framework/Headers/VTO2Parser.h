@@ -32,6 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param realData realData from peripheral
 + (VTRealObject *)parseO2RealObjectWithData:(NSData *)realData;
 
+/// @brief parse O2 Real PPG data
+/// @param realPPG real PPG data from peripheral
++ (NSArray <VTRealPPG *>*)parseO2RealPPGWithData:(NSData *)realPPG;
+
 @end
 
 NS_ASSUME_NONNULL_END
