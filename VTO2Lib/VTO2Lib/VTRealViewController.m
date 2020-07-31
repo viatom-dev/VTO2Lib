@@ -34,6 +34,13 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [VTO2Communicate sharedInstance].delegate = nil;
+    [_timer invalidate];
+    _timer = nil;
+}
+
 - (void)dealloc{
     [_timer invalidate];
     _timer = nil;

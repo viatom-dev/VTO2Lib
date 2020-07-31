@@ -25,8 +25,11 @@
     _funcArray = @[@"Get info",@"Real-time data",@"Real-PPG data",@"Reset"];
     [_myTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [VTBLEUtils sharedInstance].delegate = self;
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
