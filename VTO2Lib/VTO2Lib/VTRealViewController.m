@@ -8,12 +8,15 @@
 
 #import "VTRealViewController.h"
 #import <VTO2Lib/VTO2Lib.h>
+#import "VTBLEUtils.h"
 
 @interface VTRealViewController ()<VTO2CommunicateDelegate>
 
 @property (nonatomic, strong) UILabel *descLab;
 
 @property (nonatomic, copy) NSArray *array;
+
+@property (nonatomic) VTBLEUtils *deviceCom;
 
 @end
 
@@ -26,9 +29,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [VTO2Communicate sharedInstance].delegate = self;
+    _deviceCom = [[VTBLEUtils alloc] init];
     if (_type == 0) {
+        self.title = @"Real-time data";
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(readRealtimeData) userInfo:nil repeats:YES];
     }else{
+        self.title = @"Real-PPG data";
         [self readRealPPGData];
     }
 

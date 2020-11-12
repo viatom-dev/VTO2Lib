@@ -13,8 +13,8 @@
 @interface VTConnectViewController ()<UITableViewDelegate, UITableViewDataSource, VTBLEUtilsDelegate, VTO2CommunicateDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-
 @property (nonatomic, strong) NSMutableArray *deviceListArray;
+@property (nonatomic, strong) NSMutableArray *deviceIDArray;
 
 @end
 
@@ -68,8 +68,18 @@
 }
 
 - (void)didDiscoverDevice:(VTDevice *)device{
-    [self.deviceListArray addObject:device];
-    [self.myTableView reloadData];
+    NSUUID *identifier = [device.rawPeripheral identifier];
+    if ([_deviceIDArray containsObject:identifier]) {
+        NSUInteger index = [_deviceIDArray indexOfObject:identifier];
+        [_deviceListArray replaceObjectAtIndex:index withObject:device];
+        [_myTableView beginUpdates];
+        [_myTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        [_myTableView endUpdates];
+    }else{
+        [_deviceListArray addObject:device];
+        [_deviceIDArray addObject:identifier];
+        [_myTableView reloadData];
+    }
 }
 
 - (void)didConnectedDevice:(VTDevice *)device{

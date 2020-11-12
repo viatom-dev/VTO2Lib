@@ -83,6 +83,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief file list  in the peripheral
 @property (nonatomic, copy) NSString *fileList;
 
+/// @brief volume of reminder sound.  For O2 max 20 - 100 interval :20
+@property (nonatomic, copy) NSString *curBuzzer;
+
 
 @end
 

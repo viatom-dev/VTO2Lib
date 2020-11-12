@@ -1,3 +1,14 @@
+# 2020/11/12
+## O2 Demo v1.3
+1. 增加应用图标
+2. 增加支持设备Oxyfit&O2M
+3. 增加设置选项的注释
+
+## O2 Demo v1.3
+1. Add AppIcon.
+2. Support for Oxyfit and O2M.
+3. Add notes to settings.
+
 # 2020/7/31
 ## O2 Demo v1.2.1
 1. 修复读取PPG界面返回菜单界面闪退的bug

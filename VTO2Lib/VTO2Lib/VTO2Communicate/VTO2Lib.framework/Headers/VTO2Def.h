@@ -52,6 +52,7 @@ typedef enum : NSUInteger {
     VTParamTypeHeartRateHighThr,
     VTParamTypeLightStrength,
     VTParamTypeOxiSwitch,
+    VTParamTypeBuzzer,
 } VTParamType;
 
 

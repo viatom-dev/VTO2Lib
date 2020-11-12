@@ -81,7 +81,7 @@ static VTBLEUtils *_utils = nil;
         _device = device;
         _selectedPeripheral = device.rawPeripheral;
         [_centralManager connectPeripheral:_selectedPeripheral options:@{CBConnectPeripheralOptionNotifyOnDisconnectionKey: [NSNumber numberWithBool:YES]}];
-        [self performSelector:@selector(timeOut) withObject:self afterDelay:5.0f];
+//        [self performSelector:@selector(timeOut) withObject:self afterDelay:5.0f];
     }
 }
 

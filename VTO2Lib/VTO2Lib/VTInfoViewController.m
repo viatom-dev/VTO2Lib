@@ -119,50 +119,91 @@
                 break;
             case VTParamTypeOxiThr:
             {
+                /*
+                 * For BabyO2 80%~96% (step:+2)
+                 * For others 80%~95% (step:+1)
+                 */
                 content = @"82%";
             }
                 break;
             case VTParamTypeMotor:
             {
-                if ([[VTO2Communicate sharedInstance].peripheral.name hasPrefix:@"WearO2"]) {
-                    content = @"35";
-                }else{
-                    content = @"40";
-                }
+                /*
+                 * 0~100 intensity of vibration
+                 */
+                content = @"40";
             }
                 break;
             case VTParamTypePedtar:
             {
+                /*
+                 * support for O2.
+                 */
                 content = @"1000";
             }
                 break;
             case VTParamTypeLightingMode:
             {
+                /*
+                 * 0-Standard, 1-Always off, 2-Always on.
+                 */
                 content = @"0";
             }
                 break;
             case VTParamTypeHeartRateSwitch:
             {
-                content = @"1";  // open
+                /*
+                 @brief For O2M.  bit[0] vibrate; bit[1] sound.
+                 0 vibrate & sound close
+                 1 vibrate open, sound close
+                 2 vibrate close, sound open
+                 3 vibrate & sound open
+                 @brief For others
+                 0 close
+                 1 open
+                 */
+                content = @"1";
             }
                 break;
             case VTParamTypeHeartRateLowThr:
             {
+                /*
+                 For O2Ring&Oxylink     30~70  (step: +5)
+                 For Others             40~70  (step: +5)
+                 */
                 content = @"40";
             }
                 break;
             case VTParamTypeHeartRateHighThr:
             {
+                /*
+                 For O2Ring&Oxylink     70~200  (step: +5)
+                 For Oxyfit             100~200 (step: +10)
+                 For Others             90~200  (step: +5)
+                 */
                 content = @"120";
             }
                 break;
             case VTParamTypeLightStrength:
             {
+                /*
+                 * 2-High    1-Medium     0-Low
+                 */
                 content = @"2";
             }
                 break;
             case VTParamTypeOxiSwitch:
             {
+                /*
+                 /// @brief For O2M.  bit[0] vibrate; bit[1] sound.
+                 0 vibrate & sound close
+                 1 vibrate open, sound close
+                 2 vibrate close, sound open
+                 3 vibrate & sound open
+                 /// @brief For others
+                 0 close
+                 1 open
+                 */
                 content = @"1";
             }
                 break;
@@ -218,7 +259,14 @@
             [_availableSetParamArray addObject:@[@"Lighting mode", _info.lightingMode, @(VTParamTypeLightingMode)]];
         }
         if (_info.hrSwitch != nil) {
-            [_availableSetParamArray addObject:@[@"Heart rate switch", _info.hrSwitch, @(VTParamTypeHeartRateSwitch)]];
+            if ([[VTO2Communicate sharedInstance].peripheral.name hasPrefix:@"O2M "]) {
+                NSString *vibrateSwi = [NSString stringWithFormat:@"%d", [_info.hrSwitch intValue]&0x01];
+                NSString *soundSwi = [NSString stringWithFormat:@"%d", ([_info.hrSwitch intValue] >> 1)&0x01];
+                [_availableSetParamArray addObject:@[@"Pulse rate reminder by vibration", vibrateSwi, @(VTParamTypeHeartRateSwitch)]];
+                [_availableSetParamArray addObject:@[@"Pulse rate reminder by sound", soundSwi, @(VTParamTypeHeartRateSwitch)]];
+            }else{
+                [_availableSetParamArray addObject:@[@"Heart rate switch", _info.hrSwitch, @(VTParamTypeHeartRateSwitch)]];
+            }
         }
         if (_info.hrLowThr != nil) {
             [_availableSetParamArray addObject:@[@"Low heart rate threshold", _info.hrLowThr, @(VTParamTypeHeartRateLowThr)]];
@@ -230,7 +278,15 @@
             [_availableSetParamArray addObject:@[@"Light strength", _info.lightStrength, @(VTParamTypeLightStrength)]];
         }
         if (_info.oxiSwitch != nil) {
-            [_availableSetParamArray addObject:@[@"Oxygen switch", _info.oxiSwitch, @(VTParamTypeOxiSwitch)]];
+            if ([[VTO2Communicate sharedInstance].peripheral.name hasPrefix:@"O2M "]) {
+                NSString *vibrateSwi = [NSString stringWithFormat:@"%d", [_info.oxiSwitch intValue]&0x01];
+                NSString *soundSwi = [NSString stringWithFormat:@"%d", ([_info.oxiSwitch intValue] >> 1)&0x01];
+                [_availableSetParamArray addObject:@[@"Oxygen reminder by vibration", vibrateSwi, @(VTParamTypeOxiSwitch)]];
+                [_availableSetParamArray addObject:@[@"Oxygen reminder by sound", soundSwi, @(VTParamTypeOxiSwitch)]];
+            }else{
+                [_availableSetParamArray addObject:@[@"Oxygen switch", _info.oxiSwitch, @(VTParamTypeOxiSwitch)]];
+            }
+            
         }
         [self.tableView reloadData];
     }

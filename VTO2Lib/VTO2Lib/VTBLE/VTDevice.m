@@ -22,15 +22,17 @@
             [peripheral setValue:self.advName forKey:@"name"];
         }
         self.rawPeripheral = peripheral;
-        if (![peripheral.name hasPrefix:@"O2"] &&
-            ![peripheral.name hasPrefix:@"O2BAND"] &&
-            ![peripheral.name hasPrefix:@"SleepO2"] &&
-            ![peripheral.name hasPrefix:@"O2Ring"] &&
-            ![peripheral.name hasPrefix:@"WearO2"] &&
-            ![peripheral.name hasPrefix:@"SleepU"] &&
-            ![peripheral.name hasPrefix:@"Oxylink"] &&
-            ![peripheral.name hasPrefix:@"KidsO2"] &&
-            ![peripheral.name hasPrefix:@"BabyO2"]) {
+        if (![peripheral.name hasPrefix:@"O2 "] &&
+            ![peripheral.name hasPrefix:@"O2BAND "] &&
+            ![peripheral.name hasPrefix:@"SleepO2 "] &&
+            ![peripheral.name hasPrefix:@"O2Ring "] &&
+            ![peripheral.name hasPrefix:@"WearO2 "] &&
+            ![peripheral.name hasPrefix:@"SleepU "] &&
+            ![peripheral.name hasPrefix:@"Oxylink "] &&
+            ![peripheral.name hasPrefix:@"KidsO2 "] &&
+            ![peripheral.name hasPrefix:@"BabyO2 "] &&
+            ![peripheral.name hasPrefix:@"Oxyfit "] &&
+            ![peripheral.name hasPrefix:@"O2M "]) {
             return nil;
         }
     }
