@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VTO2Object;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VTDataDetailViewController : UIViewController
+
+@property (nonatomic, strong) VTO2Object *o2Obj;
 
 @end
 

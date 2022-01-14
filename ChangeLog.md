@@ -1,3 +1,12 @@
+# 2022/1/14
+## O2 Demo v1.4
+1. 修复一个错误
+2. 增加下载数据（VTO2Object）数值的显示
+
+## O2 Demo v1.4
+1. Modify a bug.
+2. Displayed VTO2Object's parameters.
+
 # 2020/11/12
 ## O2 Demo v1.3
 1. 增加应用图标

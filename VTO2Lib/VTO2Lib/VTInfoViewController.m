@@ -10,12 +10,15 @@
 #import <VTO2Lib/VTO2Lib.h>
 #import "SVProgressHUD.h"
 
+#import "VTDataDetailViewController.h"
+
 @interface VTInfoViewController ()<UITableViewDelegate, UITableViewDataSource, VTO2CommunicateDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *fileListArray;
 @property (nonatomic, strong) NSMutableArray *availableSetParamArray;
 @property (nonatomic, strong) VTO2Info *info;
+@property (nonatomic, strong) VTO2Object *o2Obj;
 
 @end
 
@@ -33,17 +36,6 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [VTO2Communicate sharedInstance].delegate = nil;
-}
-
-- (UITableView *)tableView{
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) style:UITableViewStylePlain];
-        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        [self.view addSubview:_tableView];
-    }
-    return _tableView;
 }
 
 
@@ -299,8 +291,9 @@
 - (void)readCompleteWithData:(VTFileToRead *)fileData{
     if (fileData.enLoadResult == VTFileLoadResultSuccess) {
         DLog(@"Download file success.");
-        NSArray *array = [VTO2Parser parseO2WaveObjectArrayWithWaveData:fileData.fileData];
-        DLog(@"wave points : %lu", (unsigned long)array.count);
+        _o2Obj = [VTO2Parser parseO2ObjectWithData:fileData.fileData];
+        [self performSegueWithIdentifier:@"gotoVTDataDetailViewController" sender:nil];
+        
     }else{
         DLog(@"Download file error : %lu", (unsigned long)fileData.enLoadResult);
     }
@@ -317,6 +310,14 @@
             [self showAlertWithTitle:@"Sync error" message:nil handler:nil];
             [SVProgressHUD dismiss];
         }
+    }
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoVTDataDetailViewController"]) {
+        VTDataDetailViewController *vc = segue.destinationViewController;
+        vc.o2Obj = _o2Obj;
     }
 }
 

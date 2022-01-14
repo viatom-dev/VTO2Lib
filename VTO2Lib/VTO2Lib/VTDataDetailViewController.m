@@ -7,8 +7,11 @@
 //
 
 #import "VTDataDetailViewController.h"
+#import <VTO2Lib/VTO2Lib.h>
 
 @interface VTDataDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
 
 @end
 
@@ -17,8 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = [NSString stringWithFormat:@"%04d-%02d-%02d %02d:%02d%02d", _o2Obj.year, _o2Obj.month, _o2Obj.day, _o2Obj.hour, _o2Obj.minute, _o2Obj.second];
+    _contentLabel.text = _o2Obj.description;
+    NSArray *array = [VTO2Parser parseO2WaveObjectArrayWithWaveData:_o2Obj.waveData];
+    DLog(@"wave points : %lu", (unsigned long)array.count);
+    
 }
 
+
+- (void)setO2Obj:(VTO2Object *)o2Obj{
+    _o2Obj = o2Obj;
+    
+}
 /*
 #pragma mark - Navigation
 

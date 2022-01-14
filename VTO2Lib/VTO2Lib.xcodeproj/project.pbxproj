@@ -17,6 +17,7 @@
 		6504C41C24A9DCE6005CE0CF /* VTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C41B24A9DCE6005CE0CF /* VTMenuViewController.m */; };
 		6504C41F24A9EB7D005CE0CF /* VTInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C41E24A9EB7C005CE0CF /* VTInfoViewController.m */; };
 		6504C42524A9EBA1005CE0CF /* VTRealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504C42424A9EBA1005CE0CF /* VTRealViewController.m */; };
+		655955FD2791A78200324FA7 /* VTDataDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655955FC2791A78200324FA7 /* VTDataDetailViewController.m */; };
 		6570DEB624A09FBD00F80D5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEB524A09FBD00F80D5C /* AppDelegate.m */; };
 		6570DEBF24A09FBD00F80D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6570DEBD24A09FBD00F80D5C /* Main.storyboard */; };
 		6570DEC124A09FC200F80D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6570DEC024A09FC200F80D5C /* Assets.xcassets */; };
@@ -66,6 +67,8 @@
 		6504C41E24A9EB7C005CE0CF /* VTInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTInfoViewController.m; sourceTree = "<group>"; };
 		6504C42324A9EBA1005CE0CF /* VTRealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTRealViewController.h; sourceTree = "<group>"; };
 		6504C42424A9EBA1005CE0CF /* VTRealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTRealViewController.m; sourceTree = "<group>"; };
+		655955FB2791A78200324FA7 /* VTDataDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDataDetailViewController.h; sourceTree = "<group>"; };
+		655955FC2791A78200324FA7 /* VTDataDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDataDetailViewController.m; sourceTree = "<group>"; };
 		6570DEB124A09FBD00F80D5C /* VTO2Lib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTO2Lib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6570DEB424A09FBD00F80D5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6570DEB524A09FBD00F80D5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				6504C41B24A9DCE6005CE0CF /* VTMenuViewController.m */,
 				6504C41D24A9EB7C005CE0CF /* VTInfoViewController.h */,
 				6504C41E24A9EB7C005CE0CF /* VTInfoViewController.m */,
+				655955FB2791A78200324FA7 /* VTDataDetailViewController.h */,
+				655955FC2791A78200324FA7 /* VTDataDetailViewController.m */,
 				6504C42324A9EBA1005CE0CF /* VTRealViewController.h */,
 				6504C42424A9EBA1005CE0CF /* VTRealViewController.m */,
 				6570DEBD24A09FBD00F80D5C /* Main.storyboard */,
@@ -347,6 +352,7 @@
 				6570DEB624A09FBD00F80D5C /* AppDelegate.m in Sources */,
 				6504C41F24A9EB7D005CE0CF /* VTInfoViewController.m in Sources */,
 				6504C41724A9CEE9005CE0CF /* SVProgressHUD.m in Sources */,
+				655955FD2791A78200324FA7 /* VTDataDetailViewController.m in Sources */,
 				6504C3E924A21824005CE0CF /* VTDevice.m in Sources */,
 				6570DEC724A09FC200F80D5C /* main.m in Sources */,
 				6504C41624A9CEE9005CE0CF /* SVProgressAnimatedView.m in Sources */,
@@ -533,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2Lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2Lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
