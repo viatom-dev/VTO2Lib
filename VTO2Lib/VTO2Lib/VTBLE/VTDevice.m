@@ -32,7 +32,8 @@
             ![peripheral.name hasPrefix:@"KidsO2 "] &&
             ![peripheral.name hasPrefix:@"BabyO2 "] &&
             ![peripheral.name hasPrefix:@"Oxyfit "] &&
-            ![peripheral.name hasPrefix:@"O2M "]) {
+            ![peripheral.name hasPrefix:@"O2M "] &&
+            ![peripheral.name hasPrefix:@"CMRing"]) {
             return nil;
         }
     }
