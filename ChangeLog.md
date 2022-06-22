@@ -1,3 +1,12 @@
+# 2022/6/22
+## O2 Demo v1.5
+1. 修复一些设置问题
+2. 增加支持设备BabyO2 S2
+
+## O2 Demo v1.5
+1. Modify some bugs.
+2. Support for BabyO2 S2(BabyO2N)
+
 # 2022/1/14
 ## O2 Demo v1.4
 1. 修复一个错误
