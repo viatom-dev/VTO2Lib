@@ -35,6 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface VTRealWave : VTRealObject
+
+@property (nonatomic, copy) NSArray *points;
+
+@end
 
 @interface VTRealPPG : NSObject
 
@@ -48,6 +53,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) u_char motion;
 
 @end
+
+
 
 
 NS_ASSUME_NONNULL_END

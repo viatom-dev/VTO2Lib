@@ -36,6 +36,7 @@ typedef enum : NSUInteger {
     VTCmdTypeGetInfo,
     VTCmdTypeSyncParam,
     VTCmdTypeGetRealData,
+    VTCmdTypeGetRealWave,
     VTCmdTypeGetRealPPG,
     VTCmdTypeSetFactory,
 } VTCmdType;
@@ -53,6 +54,10 @@ typedef enum : NSUInteger {
     VTParamTypeLightStrength,
     VTParamTypeOxiSwitch,
     VTParamTypeBuzzer,
+    VTParamTypeMtSw,
+    VTParamTypeMtThr,
+    VTParamTypeIvSw,
+    VTParamTypeIvThr,
 } VTParamType;
 
 

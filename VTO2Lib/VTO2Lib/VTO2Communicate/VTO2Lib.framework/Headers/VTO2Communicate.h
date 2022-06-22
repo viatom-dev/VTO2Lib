@@ -40,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param realData  real data
 - (void)realDataCallBackWithData:(NSData * _Nullable)realData;
 
+- (void)realWaveCallBackWithData:(NSData * _Nullable)realWave;
+
 /// @brief use `` to parse realPPG.  if realPPG == nil , an error occurred.
 /// @param realPPG real PPG data
 - (void)realPPGCallBackWithData:(NSData * _Nullable)realPPG;
@@ -75,6 +77,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// @brief Restore factory. callback `commonResponse: andResult:`
 - (void)beginFactory;
+
+- (void)beginGetRealWave;
 
 /// @brief get PPG data.
 - (void)beginGetRealPPG;
