@@ -20,6 +20,8 @@
 @property (nonatomic, strong) VTO2Info *info;
 @property (nonatomic, strong) VTO2Object *o2Obj;
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation VTInfoViewController
@@ -28,17 +30,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     [VTO2Communicate sharedInstance].delegate = self;
     [[VTO2Communicate sharedInstance] beginGetInfo];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(readFirstFile:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopReadFile:) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [VTO2Communicate sharedInstance].delegate = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark ---  system notification task
 
+- (void)readFirstFile:(NSNotification *)notification {
+    if (_fileListArray.count == 0) return;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+        NSString *fileName = self.fileListArray.firstObject;
+        DLog(@"begin read file: %@", fileName);
+        [[VTO2Communicate sharedInstance] beginReadFileWithFileName:fileName];
+    }];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)stopReadFile:(NSNotification *)notification {
+    [_timer invalidate];
+    _timer = nil;
+}
+
+#pragma mark ---  tableView delegate & datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -285,6 +308,7 @@
 }
 
 - (void)postCurrentReadProgress:(double)progress{
+    DLog(@"Downloading: %.2f%%", progress*100);
     [SVProgressHUD showProgress:progress];
 }
 
@@ -292,7 +316,7 @@
     if (fileData.enLoadResult == VTFileLoadResultSuccess) {
         DLog(@"Download file success.");
         _o2Obj = [VTO2Parser parseO2ObjectWithData:fileData.fileData];
-        [self performSegueWithIdentifier:@"gotoVTDataDetailViewController" sender:nil];
+//        [self performSegueWithIdentifier:@"gotoVTDataDetailViewController" sender:nil];
         
     }else{
         DLog(@"Download file error : %lu", (unsigned long)fileData.enLoadResult);

@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief time out       ms
 @property (nonatomic, assign) u_int timeout;
 
-@property (nonatomic, assign) id<VTO2CommunicateDelegate> _Nullable delegate;
+@property (nonatomic, weak) id<VTO2CommunicateDelegate> _Nullable delegate;
 
 + (VTO2Communicate *)sharedInstance;
 
