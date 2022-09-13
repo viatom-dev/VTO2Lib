@@ -33,6 +33,11 @@
     
     [VTO2Communicate sharedInstance].delegate = self;
     [[VTO2Communicate sharedInstance] beginGetInfo];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(readFirstFile:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopReadFile:) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
