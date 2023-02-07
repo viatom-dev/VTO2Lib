@@ -78,6 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief Restore factory. callback `commonResponse: andResult:`
 - (void)beginFactory;
 
+/// @brief get real-time waveform data. callback `realWaveCallBackWithData:`
 - (void)beginGetRealWave;
 
 /// @brief get PPG data.

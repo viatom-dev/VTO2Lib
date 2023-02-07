@@ -163,7 +163,7 @@
                  For O2Ring&Oxylink     30~70  (step: +5)
                  For Others             40~70  (step: +5)
                  */
-                content = @"40";
+                content = @"50";
             }
                 break;
             case VTParamTypeHeartRateHighThr:
@@ -173,7 +173,7 @@
                  For Oxyfit             100~200 (step: +10)
                  For Others             90~200  (step: +5)
                  */
-                content = @"120";
+                content = @"90";
             }
                 break;
             case VTParamTypeLightStrength:

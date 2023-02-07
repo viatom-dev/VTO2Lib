@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/VTO2Communicate.h</key>
 		<data>
-		QHW/3q4GRklGjoEbmU0DPQTpugU=
+		IapDKJ2bm6bcIHevDzNTdCicXeM=
 		</data>
 		<key>Headers/VTO2Def.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lKQLSdZrGlxfCXbDfOHCniYomrs=
+		OBaGezX+BBuM5pSSwrUMPZ2+BbE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QHW/3q4GRklGjoEbmU0DPQTpugU=
+			IapDKJ2bm6bcIHevDzNTdCicXeM=
 			</data>
 			<key>hash2</key>
 			<data>
-			bvVxOFsPEs2bg6t2oO7qyzlXi6pFh/pWg1uxsttzRh8=
+			4oBbj9T1a+P+24RqXxEv0Jh8QBTUiURjvLSwuFdIxg8=
 			</data>
 		</dict>
 		<key>Headers/VTO2Def.h</key>
