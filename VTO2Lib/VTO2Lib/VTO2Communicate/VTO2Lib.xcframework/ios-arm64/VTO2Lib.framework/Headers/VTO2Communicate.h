@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)serviceDeployed:(BOOL)completed;
 
+/// 300 Disconnected 301 txCharacteristic is nil
+- (void)writeDataErrorCode:(int)errorCode;
+
 /// @brief Common command send to peripheral,   callback
 /// @param cmdType command for VTCmdTypeSyncParam/VTCmdTypeSetFactory
 /// @param result view the enum VTProCommonResult
@@ -40,7 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param realData  real data
 - (void)realDataCallBackWithData:(NSData * _Nullable)realData;
 
+///
+- (void)realDataCallBackWithData:(NSData * _Nullable)realData originalData:(NSData * _Nullable)originalData;
+
 - (void)realWaveCallBackWithData:(NSData * _Nullable)realWave;
+
+- (void)realWaveCallBackWithData:(NSData * _Nullable)realWave originalData:(NSData * _Nullable)originalData;
 
 /// @brief use `` to parse realPPG.  if realPPG == nil , an error occurred.
 /// @param realPPG real PPG data

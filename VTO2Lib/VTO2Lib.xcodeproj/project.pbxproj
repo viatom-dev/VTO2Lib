@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,7 +26,7 @@
 		6570DED124A09FC300F80D5C /* VTO2LibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DED024A09FC300F80D5C /* VTO2LibTests.m */; };
 		6570DEDC24A09FC300F80D5C /* VTO2LibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEDB24A09FC300F80D5C /* VTO2LibUITests.m */; };
 		6570DEEE24A0ADAA00F80D5C /* VTConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */; };
-		65A7EA5B24ADEC6C00CFF113 /* VTO2Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A7EA5A24ADEC6C00CFF113 /* VTO2Lib.framework */; };
+		65AAF6902A28436A0081AC93 /* VTO2Lib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AAF68F2A28436A0081AC93 /* VTO2Lib.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 		6570DEDD24A09FC300F80D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6570DEEC24A0ADAA00F80D5C /* VTConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTConnectViewController.h; sourceTree = "<group>"; };
 		6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTConnectViewController.m; sourceTree = "<group>"; };
-		65A7EA5A24ADEC6C00CFF113 /* VTO2Lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VTO2Lib.framework; sourceTree = "<group>"; };
+		65AAF68F2A28436A0081AC93 /* VTO2Lib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = VTO2Lib.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A7EA5B24ADEC6C00CFF113 /* VTO2Lib.framework in Frameworks */,
+				65AAF6902A28436A0081AC93 /* VTO2Lib.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +128,7 @@
 		6504C3EA24A865A0005CE0CF /* VTO2Communicate */ = {
 			isa = PBXGroup;
 			children = (
-				65A7EA5A24ADEC6C00CFF113 /* VTO2Lib.framework */,
+				65AAF68F2A28436A0081AC93 /* VTO2Lib.xcframework */,
 			);
 			path = VTO2Communicate;
 			sourceTree = "<group>";
@@ -539,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2Lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -562,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viatom.VTO2Lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
