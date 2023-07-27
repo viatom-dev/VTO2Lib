@@ -33,9 +33,12 @@
     if (_type == 0) {
         self.title = @"Real-time data";
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(readRealtimeData) userInfo:nil repeats:YES];
-    }else{
+    } else if (_type == 1) {
         self.title = @"Real-PPG data";
         [self readRealPPGData];
+    }  else if (_type == 2) {
+        self.title = @"Real-PPG data";
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(readRealWaveData) userInfo:nil repeats:YES];
     }
 
 }
@@ -62,6 +65,10 @@
 
 - (void)readRealPPGData{
     [[VTO2Communicate sharedInstance] beginGetRealPPG];
+}
+
+- (void)readRealWaveData{
+    [[VTO2Communicate sharedInstance] beginGetRealWave];
 }
 
 - (UILabel *)descLab{
@@ -97,5 +104,18 @@
     
     
 }
+
+
+- (void)realWaveCallBackWithData:(NSData *)realWave {
+    if (realWave == nil) {
+        DLog(@"error");
+        return;
+    }
+    VTRealWave *rObj = [VTO2Parser parseO2RealWaveWithData:realWave];
+    self.descLab.text = [rObj description];
+    
+    
+}
+
 
 @end

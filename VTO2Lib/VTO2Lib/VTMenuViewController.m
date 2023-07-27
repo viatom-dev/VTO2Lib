@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _funcArray = @[@"Get info",@"Real-time data",@"Real-PPG data",@"Reset"];
+    _funcArray = @[@"Get info",@"Real-time data",@"Real-PPG data",@"Real-Waveform data",@"Reset"];
     [_myTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
 }
@@ -82,6 +82,12 @@
             break;
         }
         case 3:
+        {
+            _funcRow = 2;
+            [self performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
+            break;
+        }
+        case 4:
         {
             [self showAlertWithTitle:@"It will erase all files" message:@"" handler:^(UIAlertAction *action) {
                 [VTO2Communicate sharedInstance].delegate = self;
