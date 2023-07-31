@@ -103,8 +103,8 @@
 
 #pragma mark -- vt communicate
 
-- (void)commonResponse:(VTCmdType)cmdType andResult:(VTCommonResult)result{
-    if (cmdType == VTCmdTypeSetFactory) {
+- (void)commonResponse:(VTCmd)cmdType andResult:(VTCommonResult)result{
+    if (cmdType == VTCmdSetFactory) {
         // restore factory completed.
     }
 }

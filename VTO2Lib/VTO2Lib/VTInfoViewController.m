@@ -300,8 +300,8 @@
     [SVProgressHUD dismiss];
 }
 
-- (void)commonResponse:(VTCmdType)cmdType andResult:(VTCommonResult)result{
-    if (cmdType == VTCmdTypeSyncParam) {
+- (void)commonResponse:(VTCmd)cmdType andResult:(VTCommonResult)result{
+    if (cmdType == VTCmdSyncTime) {
         if (result == VTCommonResultSuccess) {
             [self showAlertWithTitle:@"Sync success" message:nil handler:^(UIAlertAction *action) {
                 [[VTO2Communicate sharedInstance] beginGetInfo];

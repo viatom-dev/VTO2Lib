@@ -28,18 +28,27 @@ typedef enum : NSUInteger {
     VTCommonResultFailed,
 } VTCommonResult; /// @brief result of normal command
 
-typedef enum : NSUInteger {
-    VTCmdTypeNone,
-    VTCmdTypeStartRead,
-    VTCmdTypeReading,
-    VTCmdTypeEndRead,
-    VTCmdTypeGetInfo,
-    VTCmdTypeSyncParam,
-    VTCmdTypeGetRealData,
-    VTCmdTypeGetRealWave,
-    VTCmdTypeGetRealPPG,
-    VTCmdTypeSetFactory,
-} VTCmdType;
+typedef enum : u_char {
+    VTCmdStartWrite = 0x0,
+    VTCmdWriteContent = 0x01,
+    VTCmdEndWrite = 0x02,
+    VTCmdStartRead = 0x03,
+    VTCmdReadContent = 0x04,
+    VTCmdEndRead = 0x05,
+    VTCmdLangStartUpdate = 0x0A,
+    VTCmdLangUpdateData = 0x0B,
+    VTCmdLangEndUpdate = 0x0C,
+    VTCmdAppStartUpdate = 0x0D,
+    VTCmdAppUpdateData = 0x0E,
+    VTCmdAppEndUpdate = 0x0F,
+    VTCmdGetInfo = 0x14,
+    VTCmdPing = 0x15,
+    VTCmdSyncTime = 0x16,
+    VTCmdGetRealData = 0x17,
+    VTCmdSetFactory = 0x18,
+    VTCmdGetRealWave = 0x1B,
+    VTCmdGetPPG = 0x1C,
+} VTCmd;
 
 
 typedef enum : NSUInteger {

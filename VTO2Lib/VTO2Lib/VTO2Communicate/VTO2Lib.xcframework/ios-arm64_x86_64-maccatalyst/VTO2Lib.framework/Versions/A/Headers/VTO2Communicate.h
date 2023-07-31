@@ -23,9 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)writeDataErrorCode:(int)errorCode;
 
 /// @brief Common command send to peripheral,   callback
-/// @param cmdType command for VTCmdTypeSyncParam/VTCmdTypeSetFactory
+/// @param cmdType command for VTCmdSyncTime/VTCmdSetFactory
 /// @param result view the enum VTProCommonResult
-- (void)commonResponse:(VTCmdType)cmdType andResult:(VTCommonResult)result;
+- (void)commonResponse:(VTCmd)cmdType andResult:(VTCommonResult)result;
 
 /// @brief Send the current progress of reading
 /// @param progress progress value
@@ -107,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief this is a class to describe the completeed current loading or writing file
 @interface VTFileToRead : NSObject
 
-@property (nonatomic, copy) NSString *fileName;
+@property (nonatomic, assign) NSString *fileName;
 
 @property (nonatomic, assign) u_int fileSize;
 
