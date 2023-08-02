@@ -1,3 +1,10 @@
+# 2023/8/2
+## O2 Demo v1.10
+1. 使用cocoapods集成xcframework
+
+## O2 Demo v1.10
+1. use cocoapods.
+
 # 2022/6/22
 ## O2 Demo v1.5
 1. 修复一些设置问题
