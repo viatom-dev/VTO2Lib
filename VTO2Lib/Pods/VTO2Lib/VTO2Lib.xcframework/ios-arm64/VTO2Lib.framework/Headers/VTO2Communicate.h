@@ -39,6 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param infoData information data nullable
 - (void)getInfoWithResultData:(NSData * _Nullable)infoData;
 
+/// @brief get information complete . if infoData == nil , an error occurred
+/// @param infoData information data nullable
+- (void)getStationInfoWithData:(NSData * _Nullable)infoData;
+
 /// @brief use  `parseO2RealObjectWithData` to parse realData.  if realData == nil , an error occurred.
 /// @param realData  real data
 - (void)realDataCallBackWithData:(NSData * _Nullable)realData;
@@ -80,6 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief Get information of peripheral. callback `getInfoWithResultData:`
 - (void)beginGetInfo;
 
+/// @brief Get information of station. 
+- (void)beginGetStationInfo;
+
 /// @brief Get real-time data. callback `realDataCallBackWithData:`
 - (void)beginGetRealData;
 
@@ -96,6 +103,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param paramType param type
 /// @param paramValue param content/value
 - (void)beginToParamType:(VTParamType)paramType content:(NSString *)paramValue;
+
+
+/// Simultaneous setting of multiple parameters
+/// @param params e.g.   key ---> @"VTParamType"   value ---> content
+- (void)beginToParamsDictionary:(NSDictionary *)params;
  
 /// @brief Download file from peripheral.   callback `readCompleteWithData:`  & `postCurrentReadProgress:`
 /// @param fileName file's name
@@ -107,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief this is a class to describe the completeed current loading or writing file
 @interface VTFileToRead : NSObject
 
-@property (nonatomic, assign) NSString *fileName;
+@property (nonatomic, copy) NSString *fileName;
 
 @property (nonatomic, assign) u_int fileSize;
 
