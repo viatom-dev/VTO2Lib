@@ -24,7 +24,7 @@
 >
 > ```pod 'VTO2Lib'```
 * ##### 2.1 Installation with .xcframework
-> You can visit [VTO2Lib_Pods](https://git.lepudev.com/lepusdk/vto2lib) and download, than move VTO2Lib.xcframework to your Xcode project.
+> You can visit [VTO2Lib_Pods](https://github.com/Viatom-iOS/VTO2Lib_Pods) and download, than move VTO2Lib.xcframework to your Xcode project.
 
 #### 4. Quick start
-> Visit [README](https://git.lepudev.com/lepusdk/vto2lib/-/blob/master/README.md)
+> Visit [README](https://github.com/Viatom-iOS/VTO2Lib_Pods/blob/master/README.md)
