@@ -34,7 +34,7 @@
         self.title = @"Real-time data";
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(readRealtimeData) userInfo:nil repeats:YES];
     } else if (_type == 1) {
-        self.title = @"Real-PPG data";
+        self.title = @"Real-Wave data";
         [self readRealPPGData];
     }  else if (_type == 2) {
         self.title = @"Real-PPG data";
@@ -114,7 +114,8 @@
     VTRealWave *rObj = [VTO2Parser parseO2RealWaveWithData:realWave];
     self.descLab.text = [rObj description];
     
-    
+    DLog(@"points: %@", rObj.points);
+    DLog(@"filter points: %@", [rObj filterPointsWithPulseMark:PulseMarkOther]);
 }
 
 

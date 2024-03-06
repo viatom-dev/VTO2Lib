@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		6cLn33JCIg+O8RZgGUpe8KIle/Y=
-		</data>
 		<key>Headers/VTO2Communicate.h</key>
 		<data>
 		DH34tpXSdkbdB6TZ6T2DO/bmxfE=
@@ -38,15 +34,15 @@
 		</data>
 		<key>Headers/VTRealObject.h</key>
 		<data>
-		AVvxOpcQcNIEEyap6pJr+Pa3LK8=
+		qI21n06u6gxii9I26w7WpSL9rCU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		36KyS1ABQ50sN5TIBpn+Uc5aN+E=
+		KevXHhefW2OFBanLrnKa8CWP39g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		8nvg4JPFn2QUbEoIG5IGMghFtJA=
+		yk7LWsnNMZZgafgor95b758G6MQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -132,22 +128,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AVvxOpcQcNIEEyap6pJr+Pa3LK8=
+			qI21n06u6gxii9I26w7WpSL9rCU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZTcTuu6LcFQBnLJdSeaVoPeUa0xtFtdFWILmwo0fZA8=
+			HoCCb2gGkdrfZ61C7RsPKqy+5ZpX+bjdWXV3c+AZpd8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8nvg4JPFn2QUbEoIG5IGMghFtJA=
+			yk7LWsnNMZZgafgor95b758G6MQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			qtJ9MNGqozhKGEs3C9h93aww+ILR3c+f193UBWKGmTQ=
+			opeXqc1su8Y7aM76M1v6Vgu54+tqCbgg0ckfre+lU5I=
 			</data>
 		</dict>
 	</dict>
