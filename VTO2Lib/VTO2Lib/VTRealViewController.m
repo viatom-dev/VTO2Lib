@@ -9,6 +9,7 @@
 #import "VTRealViewController.h"
 #import <VTO2Lib/VTO2Lib.h>
 #import "VTBLEUtils.h"
+#import "Pulsewave.h"
 
 @interface VTRealViewController ()<VTO2CommunicateDelegate>
 
@@ -17,6 +18,8 @@
 @property (nonatomic, copy) NSArray *array;
 
 @property (nonatomic) VTBLEUtils *deviceCom;
+
+@property (nonatomic, weak) Pulsewave *wave;
 
 @end
 
@@ -34,10 +37,11 @@
         self.title = @"Real-time data";
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(readRealtimeData) userInfo:nil repeats:YES];
     } else if (_type == 1) {
-        self.title = @"Real-Wave data";
+        self.title = @"Real-PPG data";
         [self readRealPPGData];
     }  else if (_type == 2) {
-        self.title = @"Real-PPG data";
+        self.title = @"Real-Wave data";
+        self.descLab.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height*0.5);
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(readRealWaveData) userInfo:nil repeats:YES];
     }
 
@@ -81,6 +85,15 @@
     return _descLab;
 }
 
+- (Pulsewave *)wave {
+    if (!_wave) {
+        Pulsewave *wave = [[Pulsewave alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.descLab.frame), CGRectGetWidth(self.descLab.frame), CGRectGetHeight(self.descLab.frame) - 80)];
+        [self.view addSubview:wave];
+        _wave = wave;
+    }
+    return _wave;
+}
+
 #pragma mark -- vt
 
 - (void)realDataCallBackWithData:(NSData *)realData{
@@ -116,6 +129,8 @@
     
     DLog(@"points: %@", rObj.points);
     DLog(@"filter points: %@", [rObj filterPointsWithPulseMark:PulseMarkOther]);
+    
+    self.wave.receiveArray = rObj.points;
 }
 
 

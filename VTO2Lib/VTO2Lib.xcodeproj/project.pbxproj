@@ -27,6 +27,7 @@
 		6570DED124A09FC300F80D5C /* VTO2LibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DED024A09FC300F80D5C /* VTO2LibTests.m */; };
 		6570DEDC24A09FC300F80D5C /* VTO2LibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEDB24A09FC300F80D5C /* VTO2LibUITests.m */; };
 		6570DEEE24A0ADAA00F80D5C /* VTConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */; };
+		65AB71592B985D9A00513F89 /* Pulsewave.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB71582B985D9A00513F89 /* Pulsewave.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		6570DEDD24A09FC300F80D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6570DEEC24A0ADAA00F80D5C /* VTConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTConnectViewController.h; sourceTree = "<group>"; };
 		6570DEED24A0ADAA00F80D5C /* VTConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTConnectViewController.m; sourceTree = "<group>"; };
+		65AB71572B985D9A00513F89 /* Pulsewave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pulsewave.h; sourceTree = "<group>"; };
+		65AB71582B985D9A00513F89 /* Pulsewave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pulsewave.m; sourceTree = "<group>"; };
 		74263320E7688BBF2AC943BD /* Pods-VTO2Lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTO2Lib.release.xcconfig"; path = "Target Support Files/Pods-VTO2Lib/Pods-VTO2Lib.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +181,7 @@
 		6570DEB324A09FBD00F80D5C /* VTO2Lib */ = {
 			isa = PBXGroup;
 			children = (
+				65AB71562B985D8F00513F89 /* View */,
 				6504C40A24A9CEE9005CE0CF /* SVProgressHUD */,
 				6504C3E324A204EC005CE0CF /* VTBLE */,
 				6570DEB424A09FBD00F80D5C /* AppDelegate.h */,
@@ -217,6 +221,15 @@
 				6570DEDD24A09FC300F80D5C /* Info.plist */,
 			);
 			path = VTO2LibUITests;
+			sourceTree = "<group>";
+		};
+		65AB71562B985D8F00513F89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65AB71572B985D9A00513F89 /* Pulsewave.h */,
+				65AB71582B985D9A00513F89 /* Pulsewave.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E4DE2AEBA73B8A1F4DC9B7D5 /* Frameworks */ = {
@@ -388,6 +401,7 @@
 				6504C41C24A9DCE6005CE0CF /* VTMenuViewController.m in Sources */,
 				6504C41524A9CEE9005CE0CF /* SVRadialGradientLayer.m in Sources */,
 				6570DEB624A09FBD00F80D5C /* AppDelegate.m in Sources */,
+				65AB71592B985D9A00513F89 /* Pulsewave.m in Sources */,
 				6504C41F24A9EB7D005CE0CF /* VTInfoViewController.m in Sources */,
 				6504C41724A9CEE9005CE0CF /* SVProgressHUD.m in Sources */,
 				655955FD2791A78200324FA7 /* VTDataDetailViewController.m in Sources */,
