@@ -2,7 +2,7 @@
 platform :ios, '11.0'
 
 target 'VTO2Lib' do
-    pod 'VTO2Lib'
+  pod 'VTO2Lib'
   
 end
 

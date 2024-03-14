@@ -35,9 +35,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+typedef enum : char {
+    PulseMarkOxyfit = -10, // part of Oxyfit
+    PulseMarkOther = -100, // other
+} PulseMark;
+
 @interface VTRealWave : VTRealObject
 
 @property (nonatomic, copy) NSArray *points;
+
+- (NSArray *)filterPointsWithPulseMark:(PulseMark)mark;
 
 @end
 

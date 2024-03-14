@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VTO2Def.h"
 #import "VTO2Info.h"
 #import "VTO2Object.h"
 #import "VTO2WaveObject.h"
@@ -39,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief parse O2 Real PPG data
 /// @param realPPG real PPG data from peripheral
 + (NSArray <VTRealPPG *>*)parseO2RealPPGWithData:(NSData *)realPPG;
+
+
++ (VTO2StationInfo):(NSData * _Nonnull)infoData;
 
 @end
 
