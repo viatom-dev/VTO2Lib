@@ -33,6 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief motion value
 @property (nonatomic, assign) u_char vector; 
 
+
+/// @brief support babyo2n
+@property (nonatomic) u_char ivAlert;         // 无效值报警
+@property (nonatomic) u_char oxiAlert;        // 血氧报警
+@property (nonatomic) u_char prAlert;         // 脉率报警
+@property (nonatomic) u_char motionAlert;     // 体动报警
+
 @end
 
 typedef enum : char {

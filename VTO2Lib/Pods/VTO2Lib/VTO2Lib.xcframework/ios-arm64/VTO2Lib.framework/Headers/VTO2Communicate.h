@@ -64,6 +64,30 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@protocol VTO2A5RespDelegate <NSObject>
+
+@optional
+
+///  cmd  from  VTA5Cmd /  VTBabyS3Cmd 
+- (void)a5_responseError:(VTA5RespRes)respRes withCmd:(int)cmd;
+
+
+- (void)a5_openupEncryptSuccess;
+
+- (void)a5_makeSendConfirm;
+
+- (void)a5_realParams:(VTParameters)params;
+
+- (void)a5_realWave:(VTA5Wave)wave;
+
+- (void)a5_realPPG:(VTA5Raw)raw;
+
+- (void)a5_realAAC:(VTA5Acc)acc;
+
+- (void)a5_realRunParams:(VTO2SleepRunParams)params;
+
+@end
+
 @interface VTO2Communicate : NSObject
 
 /// @brief This peripheral is currently connected. Need to be set after connection
@@ -75,7 +99,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief time out       ms
 @property (nonatomic, assign) u_int timeout;
 
-@property (nonatomic, assign) id<VTO2CommunicateDelegate> _Nullable delegate;
+@property (nonatomic, weak) id<VTO2CommunicateDelegate> _Nullable delegate;
+
+@property (nonatomic, weak) id<VTO2A5RespDelegate> _Nullable a5Delegate;
 
 + (VTO2Communicate *)sharedInstance;
 
@@ -84,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief Get information of peripheral. callback `getInfoWithResultData:`
 - (void)beginGetInfo;
 
-/// @brief Get information of station. 
+/// @brief Get information of station.  only babyN
 - (void)beginGetStationInfo;
 
 /// @brief Get real-time data. callback `realDataCallBackWithData:`
@@ -112,6 +138,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief Download file from peripheral.   callback `readCompleteWithData:`  & `postCurrentReadProgress:`
 /// @param fileName file's name
 - (void)beginReadFileWithFileName:(NSString *)fileName;
+
+///  A few devices support this feature
+- (void)openupEncryptWithToken:(NSString *)token secretKey:(NSString *)key;
+
+
+// MARK: - BabyO2S3
+
+/// 
+- (void)babyo2s3_requestRunParams;
+
+- (void)observeParameters:(BOOL)onParam waveform:(BOOL)onWave rawdata:(BOOL)onRaw accdata:(BOOL)onACC;
 
 @end
 

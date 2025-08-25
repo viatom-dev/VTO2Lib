@@ -42,7 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray <VTRealPPG *>*)parseO2RealPPGWithData:(NSData *)realPPG;
 
 
-+ (VTO2StationInfo):(NSData * _Nonnull)infoData;
++ (VTO2StationInfo)parseStationInfoWithData:(NSData *)infoData;
+
+/// 解析BabyO2 S3文件
++ (void)babyo2s3_parseFileData:(NSData *)data completed:(void(^)(VTO2FileHead_t head, VTO2SleepPointData_t *points, VTO2SleepFileTail_t tail))completed;
 
 @end
 

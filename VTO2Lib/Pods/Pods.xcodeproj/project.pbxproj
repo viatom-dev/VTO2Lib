@@ -20,11 +20,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		D140ABA423CCB7CD9F37DE2E9B030C05 /* Pods-VTO2Lib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA3804EBE1389A42168F3AD7CD15488 /* Pods-VTO2Lib-dummy.m */; };
+		2B747B03D8477A8E423805A98BBBF705 /* Pods-VTO2Lib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA3804EBE1389A42168F3AD7CD15488 /* Pods-VTO2Lib-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A46975F3A0F173DE8676B9EB9FA2FBBA /* PBXContainerItemProxy */ = {
+		7B13A6ACE026B1027ABB2FFBC379BA3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -34,21 +34,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021F26D5FE63FDC150565370680D0483 /* VTO2Lib.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = VTO2Lib.xcframework; sourceTree = "<group>"; };
 		09AE2F77A2EF0C919DD8BDDA2B7350CC /* Pods-VTO2Lib-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VTO2Lib-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1A1D62AF819D36A449722E274B511704 /* VTO2Lib.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = VTO2Lib.xcframework; sourceTree = "<group>"; };
-		375B5EA59177064C1609DAAF14B2E081 /* VTO2Lib-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VTO2Lib-xcframeworks.sh"; sourceTree = "<group>"; };
+		0DFED26AEEA1665BBBAF6F98E263CE9E /* VTO2Def.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Def.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2Def.h"; sourceTree = "<group>"; };
+		12DAF28138027A73F230032083902A6C /* VTO2Communicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Communicate.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2Communicate.h"; sourceTree = "<group>"; };
+		1FBDC4DC790EBF6894F3E9F3A43C3A94 /* VTO2Lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTO2Lib.release.xcconfig; sourceTree = "<group>"; };
+		27F2A635E42C171E0CD57CF40E6E4FB7 /* VTO2Lib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTO2Lib.debug.xcconfig; sourceTree = "<group>"; };
+		35823212F0C9111E7F21E6EA4A623F98 /* VTO2Def.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Def.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2Def.h"; sourceTree = "<group>"; };
 		485FB5208578C26B399ADCF36270E9A2 /* Pods-VTO2Lib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VTO2Lib.debug.xcconfig"; sourceTree = "<group>"; };
+		61BDC384A4C025E16EECA40622121D8C /* VTO2Lib-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VTO2Lib-xcframeworks.sh"; sourceTree = "<group>"; };
+		63B716C69145659ED48CB247600752D8 /* VTO2Object.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Object.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2Object.h"; sourceTree = "<group>"; };
+		6BB51533C1B9D52074565C58F47678D7 /* VTO2Info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Info.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2Info.h"; sourceTree = "<group>"; };
 		6BC8615E163257CBE3C0EE44E6E42DBC /* Pods-VTO2Lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VTO2Lib.release.xcconfig"; sourceTree = "<group>"; };
-		7E8525F7B7257FEFADC713F765C32090 /* VTO2Lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTO2Lib.release.xcconfig; sourceTree = "<group>"; };
-		9A68D6C4E359C2E0B07347F95BAD3B04 /* VTO2Lib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTO2Lib.debug.xcconfig; sourceTree = "<group>"; };
+		773ED3B630769237550A181AD17823C2 /* VTO2Object.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Object.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2Object.h"; sourceTree = "<group>"; };
+		819F8B5762E09767B635BB2E75B2DAA7 /* VTO2Object.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Object.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2Object.h"; sourceTree = "<group>"; };
+		8CF313F54B8E7895B8A8CD781EDC8042 /* VTO2Lib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Lib.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2Lib.h"; sourceTree = "<group>"; };
+		92422C3F33E587E025580C1A61B08435 /* VTO2Communicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Communicate.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2Communicate.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ABA3804EBE1389A42168F3AD7CD15488 /* Pods-VTO2Lib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VTO2Lib-dummy.m"; sourceTree = "<group>"; };
+		ADAEAD3AACC618C208EE293ED359DF06 /* VTO2Lib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Lib.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2Lib.h"; sourceTree = "<group>"; };
 		B672C0E0C4D623ED30FA708AC1B7B126 /* Pods-VTO2Lib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-VTO2Lib"; path = "libPods-VTO2Lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1500B9B9B0DF9A61757C4AA30447C20 /* VTO2Def.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Def.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2Def.h"; sourceTree = "<group>"; };
+		C24EB9987459DBE6D75562BFB40153B7 /* VTRealObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTRealObject.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTRealObject.h"; sourceTree = "<group>"; };
+		C6609632349BDDE07B67105867BE4E2B /* VTO2WaveObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2WaveObject.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2WaveObject.h"; sourceTree = "<group>"; };
+		C8611DB8E3B67317E251E1772947234F /* VTO2WaveObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2WaveObject.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2WaveObject.h"; sourceTree = "<group>"; };
+		CA61A9ED5FC2E0C26C63B375CA485BFD /* VTO2Lib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Lib.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2Lib.h"; sourceTree = "<group>"; };
+		D01DF2971B33AE9D8A82315312888806 /* VTO2Parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Parser.h; path = "VTO2Lib.xcframework/ios-arm64/VTO2Lib.framework/Headers/VTO2Parser.h"; sourceTree = "<group>"; };
 		D5284008212707C03E2DFA9AEE9B42AF /* Pods-VTO2Lib-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VTO2Lib-acknowledgements.plist"; sourceTree = "<group>"; };
+		DE2338A5C7A24AA24882DF79F2F1F2E4 /* VTRealObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTRealObject.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTRealObject.h"; sourceTree = "<group>"; };
+		E6A76DF81229068C0F07D290556E2286 /* VTO2WaveObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2WaveObject.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2WaveObject.h"; sourceTree = "<group>"; };
+		E8964BA8E3C932E4DB2E2F73A4304B97 /* VTO2Parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Parser.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2Parser.h"; sourceTree = "<group>"; };
+		EC46D6DBC7765B59A8ECE6DEEE18E1B3 /* VTO2Communicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Communicate.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2Communicate.h"; sourceTree = "<group>"; };
+		F9C8D11C302C72E0F1A801B8C8866805 /* VTO2Parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Parser.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2Parser.h"; sourceTree = "<group>"; };
+		FB8009E5EA0861668D83B378C36F8B2C /* VTRealObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTRealObject.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTRealObject.h"; sourceTree = "<group>"; };
+		FBF3AA6221D25D04414232B5A9B7E4D9 /* VTO2Info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Info.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-maccatalyst/VTO2Lib.framework/Versions/A/Headers/VTO2Info.h"; sourceTree = "<group>"; };
+		FE04073A7EB9E535320587B3AE28AC8E /* VTO2Info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTO2Info.h; path = "VTO2Lib.xcframework/ios-arm64_x86_64-simulator/VTO2Lib.framework/Headers/VTO2Info.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C5C3D0A35DAD386A7BAB399B2F9F8F52 /* Frameworks */ = {
+		49000CD4F20378A850C56F3F5E88B88C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,6 +95,17 @@
 			path = "Target Support Files/Pods-VTO2Lib";
 			sourceTree = "<group>";
 		};
+		3743B6643FDFDD3904884D19AF91B086 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				61BDC384A4C025E16EECA40622121D8C /* VTO2Lib-xcframeworks.sh */,
+				27F2A635E42C171E0CD57CF40E6E4FB7 /* VTO2Lib.debug.xcconfig */,
+				1FBDC4DC790EBF6894F3E9F3A43C3A94 /* VTO2Lib.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VTO2Lib";
+			sourceTree = "<group>";
+		};
 		618585AB760D2D653292498B6CC6A991 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,20 +122,46 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		88524AD5436BBEC3C2EED0A83CD1E3A4 /* Frameworks */ = {
+		C448AECB23F6A641D35CBC36FBA30E10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1A1D62AF819D36A449722E274B511704 /* VTO2Lib.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B38969F06C91EFE6055144A9479018CC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EE35D8F4D0EDD3765F52ACCEC5815240 /* VTO2Lib */,
+				C8A295EF7BA7AD84D0E3426E873019B2 /* VTO2Lib */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8A295EF7BA7AD84D0E3426E873019B2 /* VTO2Lib */ = {
+			isa = PBXGroup;
+			children = (
+				92422C3F33E587E025580C1A61B08435 /* VTO2Communicate.h */,
+				12DAF28138027A73F230032083902A6C /* VTO2Communicate.h */,
+				EC46D6DBC7765B59A8ECE6DEEE18E1B3 /* VTO2Communicate.h */,
+				0DFED26AEEA1665BBBAF6F98E263CE9E /* VTO2Def.h */,
+				C1500B9B9B0DF9A61757C4AA30447C20 /* VTO2Def.h */,
+				35823212F0C9111E7F21E6EA4A623F98 /* VTO2Def.h */,
+				6BB51533C1B9D52074565C58F47678D7 /* VTO2Info.h */,
+				FBF3AA6221D25D04414232B5A9B7E4D9 /* VTO2Info.h */,
+				FE04073A7EB9E535320587B3AE28AC8E /* VTO2Info.h */,
+				ADAEAD3AACC618C208EE293ED359DF06 /* VTO2Lib.h */,
+				CA61A9ED5FC2E0C26C63B375CA485BFD /* VTO2Lib.h */,
+				8CF313F54B8E7895B8A8CD781EDC8042 /* VTO2Lib.h */,
+				819F8B5762E09767B635BB2E75B2DAA7 /* VTO2Object.h */,
+				63B716C69145659ED48CB247600752D8 /* VTO2Object.h */,
+				773ED3B630769237550A181AD17823C2 /* VTO2Object.h */,
+				D01DF2971B33AE9D8A82315312888806 /* VTO2Parser.h */,
+				E8964BA8E3C932E4DB2E2F73A4304B97 /* VTO2Parser.h */,
+				F9C8D11C302C72E0F1A801B8C8866805 /* VTO2Parser.h */,
+				C8611DB8E3B67317E251E1772947234F /* VTO2WaveObject.h */,
+				E6A76DF81229068C0F07D290556E2286 /* VTO2WaveObject.h */,
+				C6609632349BDDE07B67105867BE4E2B /* VTO2WaveObject.h */,
+				C24EB9987459DBE6D75562BFB40153B7 /* VTRealObject.h */,
+				DE2338A5C7A24AA24882DF79F2F1F2E4 /* VTRealObject.h */,
+				FB8009E5EA0861668D83B378C36F8B2C /* VTRealObject.h */,
+				D55C206F12349F3C61B6DC7139A107B9 /* Frameworks */,
+				3743B6643FDFDD3904884D19AF91B086 /* Support Files */,
+			);
+			name = VTO2Lib;
+			path = VTO2Lib;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -108,10 +169,18 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				B38969F06C91EFE6055144A9479018CC /* Pods */,
+				C448AECB23F6A641D35CBC36FBA30E10 /* Pods */,
 				618585AB760D2D653292498B6CC6A991 /* Products */,
 				6804FE6FFB2F22C257859DE6C839D96F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D55C206F12349F3C61B6DC7139A107B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				021F26D5FE63FDC150565370680D0483 /* VTO2Lib.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -121,31 +190,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DEF3FF009522B2670EEB694CD9984D98 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				375B5EA59177064C1609DAAF14B2E081 /* VTO2Lib-xcframeworks.sh */,
-				9A68D6C4E359C2E0B07347F95BAD3B04 /* VTO2Lib.debug.xcconfig */,
-				7E8525F7B7257FEFADC713F765C32090 /* VTO2Lib.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/VTO2Lib";
-			sourceTree = "<group>";
-		};
-		EE35D8F4D0EDD3765F52ACCEC5815240 /* VTO2Lib */ = {
-			isa = PBXGroup;
-			children = (
-				88524AD5436BBEC3C2EED0A83CD1E3A4 /* Frameworks */,
-				DEF3FF009522B2670EEB694CD9984D98 /* Support Files */,
-			);
-			name = VTO2Lib;
-			path = VTO2Lib;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		ACF8FFBA38AEBBD274B8A4B8A1AB1497 /* Headers */ = {
+		42354CC1E50C88912354AA5D7E0B2294 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -157,16 +205,16 @@
 /* Begin PBXNativeTarget section */
 		614E04C0BB45885CF726078C25B8F786 /* Pods-VTO2Lib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10DBB30E23B2D56254E5AF3AAE72C555 /* Build configuration list for PBXNativeTarget "Pods-VTO2Lib" */;
+			buildConfigurationList = DFE8065C6B9708459F4C28684F4E5611 /* Build configuration list for PBXNativeTarget "Pods-VTO2Lib" */;
 			buildPhases = (
-				ACF8FFBA38AEBBD274B8A4B8A1AB1497 /* Headers */,
-				C089AD1A0F9E2B8962FBB34F109E6A05 /* Sources */,
-				C5C3D0A35DAD386A7BAB399B2F9F8F52 /* Frameworks */,
+				42354CC1E50C88912354AA5D7E0B2294 /* Headers */,
+				8CC66E1E64AA1353B5138511BC815802 /* Sources */,
+				49000CD4F20378A850C56F3F5E88B88C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F5356D9E3B75B5AF268A5DBA33E6B0D7 /* PBXTargetDependency */,
+				4AE706FAF38B6430C1233BC279FC63EA /* PBXTargetDependency */,
 			);
 			name = "Pods-VTO2Lib";
 			productName = "Pods-VTO2Lib";
@@ -179,8 +227,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -191,6 +239,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 618585AB760D2D653292498B6CC6A991 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,33 +272,34 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C089AD1A0F9E2B8962FBB34F109E6A05 /* Sources */ = {
+		8CC66E1E64AA1353B5138511BC815802 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D140ABA423CCB7CD9F37DE2E9B030C05 /* Pods-VTO2Lib-dummy.m in Sources */,
+				2B747B03D8477A8E423805A98BBBF705 /* Pods-VTO2Lib-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F5356D9E3B75B5AF268A5DBA33E6B0D7 /* PBXTargetDependency */ = {
+		4AE706FAF38B6430C1233BC279FC63EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VTO2Lib;
 			target = 5C4E8340759F4F0098DBDD80DFDA8A59 /* VTO2Lib */;
-			targetProxy = A46975F3A0F173DE8676B9EB9FA2FBBA /* PBXContainerItemProxy */;
+			targetProxy = 7B13A6ACE026B1027ABB2FFBC379BA3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0441AB8E9A87608B8C0D04799264B08B /* Release */ = {
+		55F10ED6615C9E07CE885BF63BB5E3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E8525F7B7257FEFADC713F765C32090 /* VTO2Lib.release.xcconfig */;
+			baseConfigurationReference = 27F2A635E42C171E0CD57CF40E6E4FB7 /* VTO2Lib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -256,13 +307,12 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		64D4FA4A9AAADCDCE188F1CC6195C584 /* Release */ = {
+		6F88E629F218613DF1E10E70E60A2138 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BC8615E163257CBE3C0EE44E6E42DBC /* Pods-VTO2Lib.release.xcconfig */;
+			baseConfigurationReference = 485FB5208578C26B399ADCF36270E9A2 /* Pods-VTO2Lib.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -270,6 +320,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
@@ -279,9 +331,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -344,23 +395,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		9EF2DBD75D8D7E059C971A43B0F365DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A68D6C4E359C2E0B07347F95BAD3B04 /* VTO2Lib.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -428,9 +462,9 @@
 			};
 			name = Debug;
 		};
-		C4E319B3E6906A95578D8ED52D64A3DB /* Debug */ = {
+		E5BD6E0E0B19A69A6E425291A77F498F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 485FB5208578C26B399ADCF36270E9A2 /* Pods-VTO2Lib.debug.xcconfig */;
+			baseConfigurationReference = 6BC8615E163257CBE3C0EE44E6E42DBC /* Pods-VTO2Lib.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -438,6 +472,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
@@ -447,21 +483,32 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		E5F6C8176B8AE5B50A2490A43C5E3E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBDC4DC790EBF6894F3E9F3A43C3A94 /* VTO2Lib.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10DBB30E23B2D56254E5AF3AAE72C555 /* Build configuration list for PBXNativeTarget "Pods-VTO2Lib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4E319B3E6906A95578D8ED52D64A3DB /* Debug */,
-				64D4FA4A9AAADCDCE188F1CC6195C584 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -474,8 +521,17 @@
 		746E3ABCB5A01DAB3BDFFD85823BB49D /* Build configuration list for PBXAggregateTarget "VTO2Lib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EF2DBD75D8D7E059C971A43B0F365DB /* Debug */,
-				0441AB8E9A87608B8C0D04799264B08B /* Release */,
+				55F10ED6615C9E07CE885BF63BB5E3FC /* Debug */,
+				E5F6C8176B8AE5B50A2490A43C5E3E08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE8065C6B9708459F4C28684F4E5611 /* Build configuration list for PBXNativeTarget "Pods-VTO2Lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F88E629F218613DF1E10E70E60A2138 /* Debug */,
+				E5BD6E0E0B19A69A6E425291A77F498F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
