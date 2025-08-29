@@ -9,7 +9,6 @@
 #import "VTInfoViewController.h"
 #import <VTO2Lib/VTO2Lib.h>
 #import "SVProgressHUD.h"
-
 #import "VTDataDetailViewController.h"
 
 @interface VTInfoViewController ()<UITableViewDelegate, UITableViewDataSource, VTO2CommunicateDelegate>
@@ -28,8 +27,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [VTO2Communicate sharedInstance].delegate = self;
-    [[VTO2Communicate sharedInstance] beginGetInfo];
+    
+    
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [VTO2Communicate sharedInstance].delegate = self;
+        [[VTO2Communicate sharedInstance] beginGetInfo];
+        [[VTO2Communicate sharedInstance] beginGetRealData];
+        [[VTO2Communicate sharedInstance] beginGetRealWave];
+//    }];
+    
+    
     
 }
 
@@ -139,7 +146,7 @@
                 /*
                  * 0-Standard, 1-Always off, 2-Always on.
                  */
-                content = @"0";
+                content = @"2";
             }
                 break;
             case VTParamTypeHeartRateSwitch:
@@ -286,13 +293,23 @@
 
 - (void)postCurrentReadProgress:(double)progress{
     [SVProgressHUD showProgress:progress];
+    if (progress >= 0.5 && progress <= 0.45) {
+        [[VTO2Communicate sharedInstance] beginGetRealData];
+    }
 }
 
 - (void)readCompleteWithData:(VTFileToRead *)fileData{
     if (fileData.enLoadResult == VTFileLoadResultSuccess) {
         DLog(@"Download file success.");
-        _o2Obj = [VTO2Parser parseO2ObjectWithData:fileData.fileData];
-        [self performSegueWithIdentifier:@"gotoVTDataDetailViewController" sender:nil];
+        if ([[VTO2Communicate sharedInstance].peripheral.name hasPrefix:@"BBSM S3 "]) {
+            [VTO2Parser babyo2s3_parseFileData:fileData.fileData completed:^(VTO2FileHead_t head, VTO2SleepPointData_t * _Nonnull points, VTO2SleepFileTail_t tail) {
+                NSString *time = [NSString stringWithFormat:@"%04d-%02d-%02d %02d:%02d:%02d", head.year, head.month, head.day, head.hour, head.minute, head.second];
+                DLog(@"time: %@", time);
+            }];
+        } else {
+            _o2Obj = [VTO2Parser parseO2ObjectWithData:fileData.fileData];
+            [self performSegueWithIdentifier:@"gotoVTDataDetailViewController" sender:nil];
+        }
         
     }else{
         DLog(@"Download file error : %lu", (unsigned long)fileData.enLoadResult);

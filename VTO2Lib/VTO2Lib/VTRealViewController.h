@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VTRealViewController : UIViewController
 
-@property (nonatomic, assign) int type;  // 0 real-data  1  real-ppg 2 real-waveform
+@property (nonatomic, assign) int type;   // 0 real-data  1  real-ppg 2 real-waveform 3. real-params
 
 @end
 

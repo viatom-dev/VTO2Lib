@@ -11,7 +11,26 @@
 #import "VTBLEUtils.h"
 #import "VTRealViewController.h"
 
-@interface VTMenuViewController ()<UITableViewDelegate, UITableViewDataSource, VTO2CommunicateDelegate, VTBLEUtilsDelegate>
+@interface VTMenuItem : NSObject
+
+@property (nonatomic, strong) NSString *title;
+
+@property (nonatomic, copy) void(^clickFuction)(void);
+
+@end
+
+@implementation VTMenuItem
+
++ (instancetype)itemWithTitle:(NSString *)title selector:(void(^)(void))selector {
+    VTMenuItem *item = [[VTMenuItem alloc] init];
+    item.title = title;
+    item.clickFuction = selector;
+    return item;
+}
+
+@end
+
+@interface VTMenuViewController ()<UITableViewDelegate, UITableViewDataSource, VTO2CommunicateDelegate, VTBLEUtilsDelegate, VTO2A5RespDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, copy) NSArray *funcArray;
 @property (nonatomic, assign) NSInteger funcRow;
@@ -22,7 +41,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _funcArray = @[@"Get info",@"Real-time data",@"Real-PPG data",@"Real-Waveform data",@"Reset"];
+    
+    __weak typeof(self) weakself = self;
+    
+    VTMenuItem *infoItem = [VTMenuItem itemWithTitle:@"Get Info" selector:^{
+        [weakself performSegueWithIdentifier:@"gotoVTInfoViewController" sender:nil];
+    }];
+
+    
+    VTMenuItem *realdataItem = [VTMenuItem itemWithTitle:@"Real-time data" selector:^{
+        weakself.funcRow = 0;
+        [weakself performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
+    }];
+    
+    VTMenuItem *realPPGItem = [VTMenuItem itemWithTitle:@"Real-PPG data" selector:^{
+        weakself.funcRow = 1;
+        [weakself performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
+    }];
+    
+    VTMenuItem *realWaveItem = [VTMenuItem itemWithTitle:@"Real-Waveform data" selector:^{
+        weakself.funcRow = 2;
+        [weakself performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
+    }];
+    
+    VTMenuItem *realParamsItem = [VTMenuItem itemWithTitle:@"Real-Params data" selector:^{
+        weakself.funcRow = 3;
+        [weakself performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
+    }];
+    
+    VTMenuItem *resetItem = [VTMenuItem itemWithTitle:@"Reset" selector:^{
+        [weakself showAlertWithTitle:@"It will erase all files" message:@"" handler:^(UIAlertAction *action) {
+            [VTO2Communicate sharedInstance].delegate = weakself;
+            [[VTO2Communicate sharedInstance] beginFactory];
+        }];
+    }];
+    
+    VTMenuItem *encryptItem = [VTMenuItem itemWithTitle:@"Encrypt" selector:^{
+        [VTO2Communicate sharedInstance].a5Delegate = weakself;
+        static NSString *token = @"0xC2CFDAD8A8F7C43530303030";
+        static NSString *secretKey = @"0xC2A7CF50DAFED885A8F8F7EAC44335F3";
+        [[VTO2Communicate sharedInstance] openupEncryptWithToken:token secretKey:secretKey];
+    }];
+    
+    _funcArray = @[infoItem, realdataItem, realPPGItem, realWaveItem, realParamsItem, resetItem, encryptItem];
     [_myTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     
 }
@@ -56,7 +117,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = _funcArray[indexPath.section];
+    VTMenuItem *item = _funcArray[indexPath.section];
+    cell.textLabel.text = item.title;
     return cell;
 }
 
@@ -65,39 +127,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.section) {
-        case 0:
-            [self performSegueWithIdentifier:@"gotoVTInfoViewController" sender:nil];
-            break;
-        case 1:
-        {
-            _funcRow = 0;
-            [self performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
-            break;
-        }
-        case 2:
-        {
-            _funcRow = 1;
-            [self performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
-            break;
-        }
-        case 3:
-        {
-            _funcRow = 2;
-            [self performSegueWithIdentifier:@"gotoVTRealViewController" sender:nil];
-            break;
-        }
-        case 4:
-        {
-            [self showAlertWithTitle:@"It will erase all files" message:@"" handler:^(UIAlertAction *action) {
-                [VTO2Communicate sharedInstance].delegate = self;
-                [[VTO2Communicate sharedInstance] beginFactory];
-            }];
-            break;
-        }
-        default:
-            break;
-    }
+    VTMenuItem *item = _funcArray[indexPath.section];
+    item.clickFuction();
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -107,6 +138,10 @@
     if (cmdType == VTCmdSetFactory) {
         // restore factory completed.
     }
+}
+
+- (void)a5_openupEncryptResult:(VTA5RespRes)respRes {
+    
 }
 
 

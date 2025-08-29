@@ -11,7 +11,7 @@
 #import "VTBLEUtils.h"
 #import "Pulsewave.h"
 
-@interface VTRealViewController ()<VTO2CommunicateDelegate>
+@interface VTRealViewController ()<VTO2CommunicateDelegate, VTO2A5RespDelegate>
 
 @property (nonatomic, strong) UILabel *descLab;
 
@@ -43,6 +43,15 @@
         self.title = @"Real-Wave data";
         self.descLab.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height*0.5);
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(readRealWaveData) userInfo:nil repeats:YES];
+    }  else if (_type == 3) {
+        self.title = @"Real-Params data";
+//        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            [VTO2Communicate sharedInstance].a5Delegate = self;
+//            [[VTO2Communicate sharedInstance] babyo2s3_requestRunParams];
+//        }];
+        self.descLab.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height*0.5);
+        [VTO2Communicate sharedInstance].a5Delegate = self;
+        [[VTO2Communicate sharedInstance] observeParameters:YES waveform:NO rawdata:NO accdata:NO];
     }
 
 }
@@ -131,6 +140,22 @@
     DLog(@"filter points: %@", [rObj filterPointsWithPulseMark:PulseMarkOther]);
     
     self.wave.receiveArray = rObj.points;
+}
+
+
+- (void)a5_realRunParams:(VTO2SleepRunParams)params {
+//    NSLog(@"current spo2 : %d ~ %d ~ %d", params.spo2, params.pr, params.pi);
+    self.descLab.text = [NSString stringWithFormat:@"spo2: %d ~ pr: %d ~ pi: %d", params.spo2, params.pr, params.pi];
+}
+
+-  (void)a5_realWave:(VTA5Wave)wave {
+    NSMutableArray *arrM = [NSMutableArray arrayWithCapacity:wave.sampling_num];
+    for (int i = 0; i < wave.sampling_num; i++) {
+        uint8_t point = wave.waveform_data[i];
+        [arrM addObject:@(point)];
+    }
+    
+    self.wave.receiveArray = arrM;
 }
 
 

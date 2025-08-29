@@ -34,6 +34,13 @@
     return _deviceListArray;
 }
 
+- (NSMutableArray *)deviceIDArray {
+    if (!_deviceIDArray) {
+        _deviceIDArray = [NSMutableArray arrayWithCapacity:10];
+    }
+    return _deviceIDArray;
+}
+
 
 #pragma mark --  tableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -69,7 +76,7 @@
 
 - (void)didDiscoverDevice:(VTDevice *)device{
     NSUUID *identifier = [device.rawPeripheral identifier];
-    if ([_deviceIDArray containsObject:identifier]) {
+    if ([self.deviceIDArray containsObject:identifier]) {
         NSUInteger index = [_deviceIDArray indexOfObject:identifier];
         [_deviceListArray replaceObjectAtIndex:index withObject:device];
         [_myTableView beginUpdates];
